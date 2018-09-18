@@ -10,6 +10,9 @@ import UIKit
 import Firebase
 
 class LoginViewController: UIViewController {
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     
@@ -18,6 +21,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        try! Auth.auth().signOut()
         let statusBar = UIView()
         self.view.addSubview(statusBar)
         statusBar.snp.makeConstraints { (m) in
@@ -31,12 +35,30 @@ class LoginViewController: UIViewController {
         signUpButton.backgroundColor = UIColor(hex: color)
         
         signUpButton.addTarget(self, action: #selector(presentSignup), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(loginEvent), for: .touchUpInside)
+        
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            if(user != nil) {
+                let view = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+                self.present(view, animated: true, completion: nil)
+            }
+        }
     }
     
     @IBAction func presentSignup() {
         let view = self.storyboard?.instantiateViewController(withIdentifier: "SignupViewController") as! SignupViewController
         self.present(view, animated: true, completion: nil)
         
+    }
+    
+    @IBAction func loginEvent() {
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, err) in
+            if(err != nil) {
+                let alert = UIAlertController(title: "Error", message: err.debugDescription, preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -64,7 +64,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                         <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -116,7 +116,9 @@
                         <viewLayoutGuide key="safeArea" id="wNG-Ab-pnB"/>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="ITL-HE-YxL" id="Wpa-Ge-Ebg"/>
                         <outlet property="loginButton" destination="K3q-NP-jl4" id="LaZ-YU-k3l"/>
+                        <outlet property="passwordTextField" destination="c4r-Vy-MEH" id="fpG-xa-A92"/>
                         <outlet property="signUpButton" destination="r4C-bi-YKw" id="s4t-AZ-3YW"/>
                     </connections>
                 </viewController>
@@ -173,7 +175,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                         <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -242,7 +244,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1p-b8-VSq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1509.5999999999999" y="136.69950738916256"/>
+            <point key="canvasLocation" x="786" y="822"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="s7Q-yc-c97">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="Bfj-hK-J5g" customClass="MainViewController" customModule="FireBaseChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zoV-UG-pdq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Ocr-HK-j5b"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="21a-JY-8iD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1559" y="137"/>
         </scene>
     </scenes>
     <resources>

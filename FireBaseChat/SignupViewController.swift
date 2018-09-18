@@ -87,7 +87,6 @@ class SignupViewController: UIViewController,UINavigationControllerDelegate,UIIm
                 })
             })
             
-            Database.database().reference().child("user").child(uid).setValue(["userName":self.nameTextField.text!])
             self.dismiss(animated: true, completion: nil)
         }
     }
