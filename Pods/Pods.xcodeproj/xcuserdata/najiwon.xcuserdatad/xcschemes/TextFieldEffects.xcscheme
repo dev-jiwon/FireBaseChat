@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C41534D8CDCE7248CD77AEA8130E3211"
-               BlueprintName = "Protobuf"
+               BlueprintIdentifier = "862131D38E5467724527968DD55610A2"
+               BlueprintName = "TextFieldEffects"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Protobuf.framework">
+               BuildableName = "TextFieldEffects.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
