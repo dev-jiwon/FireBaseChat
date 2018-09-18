@@ -11,8 +11,9 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 
-class SignupViewController: UIViewController {
+class SignupViewController: UIViewController,UINavigationControllerDelegate,UIImagePickerControllerDelegate {
     
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -28,6 +29,18 @@ class SignupViewController: UIViewController {
         setViews()
         signUpButton.addTarget(self, action: #selector(signUpEvent), for: .touchUpInside)
         cancelButton.addTarget(self, action: #selector(cancelEvent), for: .touchUpInside)
+        
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imagePickerEvent)))
+    }
+    
+    @IBAction func imagePickerEvent() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        imagePicker.sourceType = .photoLibrary
+        
+        self.present(imagePicker, animated: true, completion: nil)
     }
     
     func setViews() {
@@ -45,11 +58,36 @@ class SignupViewController: UIViewController {
         cancelButton.backgroundColor = UIColor(hex: color)
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        imageView.image = info[UIImagePickerControllerEditedImage] as? UIImage
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func signUpEvent() {
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, err) in
             let uid = user!.user.uid
             
-            Database.database().reference().child("user").child(uid).setValue(["name":self.nameTextField.text!])
+            let image = UIImageJPEGRepresentation(self.imageView.image!, 0.1)
+            
+            let storageRef = Storage.storage().reference().child("userImages").child(uid)
+            storageRef.putData(image!, metadata: nil, completion: { (data, error) in
+                if let error = error {
+                    print(error.localizedDescription)
+                    return
+                }
+                
+                storageRef.downloadURL(completion: { (url, error) in
+                    if let _ = error{
+                        return
+                    }
+                    if url != nil{
+                        let imageUrl = url?.absoluteString
+                        Database.database().reference().child("users").child(uid).setValue(["userName":self.nameTextField.text!, "profileImageUrl":imageUrl])
+                    }
+                })
+            })
+            
+            Database.database().reference().child("user").child(uid).setValue(["userName":self.nameTextField.text!])
             self.dismiss(animated: true, completion: nil)
         }
     }

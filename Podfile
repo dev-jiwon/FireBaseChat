@@ -13,6 +13,7 @@ target 'FireBaseChat' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
   pod 'TextFieldEffects'
 
 # Workaround for Cocoapods issue #7606
