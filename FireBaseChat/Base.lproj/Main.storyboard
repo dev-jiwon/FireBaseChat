@@ -47,7 +47,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="username"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                         <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -64,7 +64,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                         <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -141,7 +141,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress" textContentType="username"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                         <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -158,7 +158,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" textContentType="name"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                         <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -175,7 +175,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                         <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -246,7 +246,7 @@
             </objects>
             <point key="canvasLocation" x="786" y="822"/>
         </scene>
-        <!--Main View Controller-->
+        <!--People-->
         <scene sceneID="s7Q-yc-c97">
             <objects>
                 <viewController storyboardIdentifier="MainViewController" id="Bfj-hK-J5g" customClass="MainViewController" customModule="FireBaseChat" customModuleProvider="target" sceneMemberID="viewController">
@@ -256,14 +256,69 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ocr-HK-j5b"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="People" image="baseline_people_black_18dp" id="A2F-jz-eh0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21a-JY-8iD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1559" y="137"/>
+            <point key="canvasLocation" x="2500" y="136.69950738916256"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="2l4-Hk-vdW">
+            <objects>
+                <viewController id="NCA-LY-NAE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bKE-7m-PFR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Zz1-Bf-xCk"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Chat" image="baseline_chat_black_18dp" id="7rR-Fk-ETw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Z6-VM-NHg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2500" y="798"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="C6p-CL-6FQ">
+            <objects>
+                <viewController id="pM3-S3-8Bs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="19m-fS-ji1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="QYH-35-d2y"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Account" image="baseline_account_circle_black_18dp" id="tpt-5g-FL0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S4X-Pw-TBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2479" y="1474"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="mZe-4b-IdK">
+            <objects>
+                <tabBarController storyboardIdentifier="MainViewTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="aKy-cr-ku5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M66-pG-qdq">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Bfj-hK-J5g" kind="relationship" relationship="viewControllers" id="UA6-6j-gay"/>
+                        <segue destination="NCA-LY-NAE" kind="relationship" relationship="viewControllers" id="bRW-QX-3GY"/>
+                        <segue destination="pM3-S3-8Bs" kind="relationship" relationship="viewControllers" id="L7O-d7-7iG"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BLd-ay-wn9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1557.5999999999999" y="136.69950738916256"/>
         </scene>
     </scenes>
     <resources>
+        <image name="baseline_account_circle_black_18dp" width="18" height="18"/>
         <image name="baseline_add_to_photos" width="18" height="18"/>
+        <image name="baseline_chat_black_18dp" width="18" height="18"/>
+        <image name="baseline_people_black_18dp" width="18" height="18"/>
         <image name="logo" width="256" height="256"/>
     </resources>
 </document>
