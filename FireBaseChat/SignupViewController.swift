@@ -82,7 +82,13 @@ class SignupViewController: UIViewController,UINavigationControllerDelegate,UIIm
                     }
                     if url != nil{
                         let imageUrl = url?.absoluteString
-                        Database.database().reference().child("users").child(uid).setValue(["userName":self.nameTextField.text!, "profileImageUrl":imageUrl])
+                        let values = ["userName":self.nameTextField.text!, "profileImageUrl":imageUrl]
+                        Database.database().reference().child("users").child(uid).setValue(values, withCompletionBlock: { (error, ref) in
+                            if error == nil {
+                                self.cancelEvent()
+                            }
+                        })
+//                        Database.database().reference().child("users").child(uid).setValue(["userName":self.nameTextField.text!, "profileImageUrl":imageUrl])
                     }
                 })
             })

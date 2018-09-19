@@ -23,7 +23,7 @@ class PeopleViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         view.addSubview(tableView)
         tableView.snp.makeConstraints { (m) in
-            m.top.equalTo(view).offset(20)
+            m.top.equalTo(view)
             m.bottom.left.right.equalTo(view)
         }
         
@@ -54,7 +54,7 @@ extension PeopleViewController: UITableViewDelegate, UITableViewDataSource {
         cell.addSubview(imageView)
         imageView.snp.makeConstraints { (m) in
             m.centerY.equalTo(cell)
-            m.left.equalTo(cell)
+            m.left.equalTo(cell).offset(10)
             m.height.width.equalTo(50)
         }
         
@@ -69,14 +69,19 @@ extension PeopleViewController: UITableViewDelegate, UITableViewDataSource {
         cell.addSubview(label)
         label.snp.makeConstraints { (m) in
             m.centerY.equalTo(cell)
-            m.left.equalTo(imageView.snp.right).offset(30)
+            m.left.equalTo(imageView.snp.right).offset(20)
         }
         label.text = array[indexPath.row].userName
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 70
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let view = self.storyboard?.instantiateViewController(withIdentifier: "ChatViewController")
+        self.navigationController?.pushViewController(view!, animated: true)
     }
     
     

@@ -46,7 +46,7 @@
                                     <constraint firstAttribute="height" constant="40" id="w3U-7L-USQ"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="username"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
@@ -63,7 +63,7 @@
                                     <constraint firstAttribute="height" constant="40" id="YPw-7d-t5W"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
@@ -246,7 +246,7 @@
             </objects>
             <point key="canvasLocation" x="786" y="822"/>
         </scene>
-        <!--People-->
+        <!--People View Controller-->
         <scene sceneID="s7Q-yc-c97">
             <objects>
                 <viewController storyboardIdentifier="PeopleViewController" id="Bfj-hK-J5g" customClass="PeopleViewController" customModule="FireBaseChat" customModuleProvider="target" sceneMemberID="viewController">
@@ -256,11 +256,26 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ocr-HK-j5b"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="People" image="baseline_people_black_18dp" id="A2F-jz-eh0"/>
+                    <navigationItem key="navigationItem" id="6dC-wc-965"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21a-JY-8iD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2500" y="136.69950738916256"/>
+            <point key="canvasLocation" x="3442.4000000000001" y="136.69950738916256"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eyS-xA-X3J">
+            <objects>
+                <viewController storyboardIdentifier="ChatViewController" id="E0v-Ln-Cuv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ltd-Vb-PwW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0dT-pr-UaJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d3r-x0-H5l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4204" y="137"/>
         </scene>
         <!--Chat-->
         <scene sceneID="2l4-Hk-vdW">
@@ -304,7 +319,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Bfj-hK-J5g" kind="relationship" relationship="viewControllers" id="UA6-6j-gay"/>
+                        <segue destination="LaG-Gy-RH7" kind="relationship" relationship="viewControllers" id="UA6-6j-gay"/>
                         <segue destination="NCA-LY-NAE" kind="relationship" relationship="viewControllers" id="bRW-QX-3GY"/>
                         <segue destination="pM3-S3-8Bs" kind="relationship" relationship="viewControllers" id="L7O-d7-7iG"/>
                     </connections>
@@ -312,6 +327,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLd-ay-wn9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1557.5999999999999" y="136.69950738916256"/>
+        </scene>
+        <!--People-->
+        <scene sceneID="C0l-3P-wMk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LaG-Gy-RH7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="People" image="baseline_people_black_18dp" id="A2F-jz-eh0"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nM2-1d-gRr">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Bfj-hK-J5g" kind="relationship" relationship="rootViewController" id="Zgs-BI-Fhp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mc4-IL-HCn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2500" y="136.69950738916256"/>
         </scene>
     </scenes>
     <resources>
