@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		131AC66D2151322B00CA3525 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131AC66C2151322B00CA3525 /* SignupViewController.swift */; };
-		131AC66F2151584200CA3525 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131AC66E2151584200CA3525 /* MainViewController.swift */; };
+		131AC6712151FFC500CA3525 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131AC6702151FFC500CA3525 /* UserModel.swift */; };
+		131AC6732152001A00CA3525 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131AC6722152001A00CA3525 /* PeopleViewController.swift */; };
 		1388E29A214F7D4800264F44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1388E299214F7D4800264F44 /* AppDelegate.swift */; };
 		1388E29C214F7D4800264F44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1388E29B214F7D4800264F44 /* ViewController.swift */; };
 		1388E29F214F7D4800264F44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1388E29D214F7D4800264F44 /* Main.storyboard */; };
@@ -22,7 +23,8 @@
 
 /* Begin PBXFileReference section */
 		131AC66C2151322B00CA3525 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
-		131AC66E2151584200CA3525 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		131AC6702151FFC500CA3525 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		131AC6722152001A00CA3525 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		1388E296214F7D4800264F44 /* FireBaseChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireBaseChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1388E299214F7D4800264F44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1388E29B214F7D4800264F44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,10 +74,11 @@
 			isa = PBXGroup;
 			children = (
 				1388E299214F7D4800264F44 /* AppDelegate.swift */,
+				131AC6702151FFC500CA3525 /* UserModel.swift */,
 				1388E29B214F7D4800264F44 /* ViewController.swift */,
 				1388E2B12150E02700264F44 /* LoginViewController.swift */,
 				131AC66C2151322B00CA3525 /* SignupViewController.swift */,
-				131AC66E2151584200CA3525 /* MainViewController.swift */,
+				131AC6722152001A00CA3525 /* PeopleViewController.swift */,
 				1388E29D214F7D4800264F44 /* Main.storyboard */,
 				1388E2A0214F7D4900264F44 /* Assets.xcassets */,
 				1388E2A2214F7D4900264F44 /* LaunchScreen.storyboard */,
@@ -233,7 +236,8 @@
 				1388E29C214F7D4800264F44 /* ViewController.swift in Sources */,
 				131AC66D2151322B00CA3525 /* SignupViewController.swift in Sources */,
 				1388E29A214F7D4800264F44 /* AppDelegate.swift in Sources */,
-				131AC66F2151584200CA3525 /* MainViewController.swift in Sources */,
+				131AC6712151FFC500CA3525 /* UserModel.swift in Sources */,
+				131AC6732152001A00CA3525 /* PeopleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

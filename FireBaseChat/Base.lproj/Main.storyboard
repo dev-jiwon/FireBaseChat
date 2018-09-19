@@ -249,7 +249,7 @@
         <!--People-->
         <scene sceneID="s7Q-yc-c97">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" id="Bfj-hK-J5g" customClass="MainViewController" customModule="FireBaseChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PeopleViewController" id="Bfj-hK-J5g" customClass="PeopleViewController" customModule="FireBaseChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zoV-UG-pdq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

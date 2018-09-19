@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        try! Auth.auth().signOut()  //시작할때 자동으로 로그아웃 (나중에 로그아웃 버튼 만들고나면 지우면 될듯)
+//        try! Auth.auth().signOut()  //시작할때 자동으로 로그아웃 (나중에 로그아웃 버튼 만들고나면 지우면 될듯)
         let statusBar = UIView()
         self.view.addSubview(statusBar)
         statusBar.snp.makeConstraints { (m) in
